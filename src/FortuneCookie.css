@@ -1,0 +1,50 @@
+.fortune-cookie-container {
+  width: 410px;
+  height: 175px;
+
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rolled-cookie-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.fortune-message {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff69b4;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  white-space: normal;
+  word-wrap: break-word;
+  z-index: 3;
+}
+
+.fortune-message.visible {
+  opacity: 1;
+}
